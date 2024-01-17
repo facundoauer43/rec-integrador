@@ -1,0 +1,215 @@
+body {
+padding-top: 91px;
+    background-image: url('https://triunfacontulibro.com/wp-content/uploads/2018/04/91fed039cf8b4a4a0d4df144c0fd9dbf.jpg'); /* Reemplaza 'ruta/a/tu/imagen.jpg' con la ruta de tu imagen de fondo */
+    background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-position: center; /* Centra la imagen en el fondo */
+    /* Otros estilos del cuerpo... */
+}
+
+.header {
+    background-color: #C19A6B;
+    color: rgb(65, 121, 65);
+    padding: 14px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Asegura que esté sobre otros elementos */
+    margin-bottom: 60px; /* Ajusta según el espacio que desees entre el header y los productos */
+}
+
+
+.logo {
+    margin-right: center;
+    margin-left: center;
+}
+
+.search-box {
+    display: flex;
+    align-items: auto;
+    margin-left: auto;
+    margin-right: center;
+}
+
+.rounded-input {
+    border-radius: 15px;
+    padding: 8px;
+    margin-right: 10px;
+    border: none;
+}
+
+.search-button {
+    border-radius: 15px;
+    padding: 10px;
+    border: none;
+    background-color: #f9f9f9;
+    color: #267023;
+    cursor: pointer;
+}
+
+.user-options {
+    margin-left: auto;
+}
+
+.user-options a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.main-styles {
+    font-family: 'Applied sans pro';
+    width: 100vw;
+}
+
+.route-nav-bar {
+    width: 100%;
+    background-color: #00b140;
+    opacity: 0.5;
+    color: white;
+    padding: 5px 3px;
+    font-size: 0.9em;
+}
+
+.product-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px; /* Ajusta según el tamaño del header */
+    margin-bottom: 20px; /* Espacio entre productos y footer */
+    
+}
+
+.product-card {
+    width: 250px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    margin: 10px;
+    float: left; /* Añade esta propiedad para que las tarjetas estén en línea */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.product-info {
+    box-shadow: 0px 0px 10px #58430a;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    width: 90%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #C19A6B; /* Fondo blanco */
+    border-radius: 10px; /* Redondea los bordes */
+    border: none; /* Quita el borde predeterminado de los botones */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+.product-info:hover {
+    background-color: #917250; /* Cambia el color de fondo al pasar sobre el botón */
+}
+
+.brand,
+.name {
+    font-size: 1.2em;
+    padding: 5px 5px 0;
+    margin-left: 20px;
+}
+
+.name {
+    font-size: 1em;
+}
+
+.product-actions {
+    font-size: 0.9em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.price,
+.label-quantity {
+    padding: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.add {
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    align-self: center;
+    background-color: #00b140;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+.detailed {
+    width: 80%;
+    margin: auto;
+}
+
+.detailed-title,
+.detailes-lines {
+    padding: 10px 0;
+}
+
+/* Estilos para el efecto de pasar páginas del libro */
+.book-container {
+    width: 600px; /* Ajusta el ancho según tus necesidades */
+    height: 400px; /* Ajusta el alto según tus necesidades */
+    perspective: 1000px; /* Propiedad para crear el efecto 3D */
+    position: relative;
+}
+
+.page {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden; /* Oculta la cara trasera del elemento */
+    transform-style: preserve-3d; /* Mantén el efecto 3D del transform */
+    transition: transform 1s; /* Transición suave para el cambio de página */
+}
+
+    .footer {
+        background-color: #333;
+        color: white;
+        padding: 0px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        z-index: 100; /* Asegura que el footer esté por debajo de otros elementos */
+    }
+
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
