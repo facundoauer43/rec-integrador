@@ -1,87 +1,120 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.cdnfonts.com/css/applied-sans-pro" rel="stylesheet">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-  <link rel="stylesheet" href="/css/styles-register.css">
-  <title>Register</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.cdnfonts.com/css/applied-sans-pro" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="/css/styles-register.css">
+    <title>Register</title>
 
-  <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc0yMwnAAAAAOz7v5s4kuoxuyi_tN7a22zEosaQ"></script>
+    <script src="https://www.google.com/recaptcha/enterprise.js?render=6Lc0yMwnAAAAAOz7v5s4kuoxuyi_tN7a22zEosaQ"></script>
 </head>
-<body>
-  <div class="form-container">
-    <div class="form-column left-column">
-      <form action="/registro" method="post">
-        <label for="nombre">Nombre y Apellido:</label>
-        <input type="text" id="nombre" name="nombre" required><br><br>
-
-        <label for="correo">Correo Electrónico:</label>
-        <div style="display: flex; align-items: center;">
-          <input type="email" id="correo" name="correo" required>
-        </div><br><br>
-
-        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
-        <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
-
-        <label for="codigoPostal">Código Postal:</label>
-        <input type="text" id="codigoPostal" name="codigoPostal" required><br><br>
-
-        <label for="numeroTelefono">Número de Teléfono:</label>
-        <div style="display: flex; align-items: center;">
-          <input type="text" id="codigoArea" name="codigoArea" style="width: 80px;" placeholder="Área" required>
-          <input type="text" id="numeroTelefono" name="numeroTelefono" style="margin-left: 10px;" required>
-        </div><br><br>
-        
-        <label for="tipoDocumento">Tipo de Documento:</label>
-        <select id="tipoDocumento" name="tipoDocumento" required>
-          <option value="dni" disabled selected>Seleccione un tipo de documento</option>
-          <option value="dni">DNI</option>
-          <option value="pasaporte">Pasaporte</option>
-          <option value="carnet">Carnet de Identidad</option>
-          <!-- Agrega más opciones si es necesario -->
-        </select><br><br>
-      </form>
-    </div>
-    
-    <div class="form-column right-column">
-      <form action="/registro" method="post">
-        <label for="numeroDocumento">Número de Documento:</label>
-        <input type="text" id="numeroDocumento" name="numeroDocumento" required><br><br>
-
-        <label for="contrasena">Contraseña:</label>
-        <input type="password" id="contrasena" name="contrasena" required><br><br>
-
-        <label for="confirmarContrasena">Confirmar Contraseña:</label>
-        <input type="password" id="confirmarContrasena" name="confirmarContrasena" required><br><br>
-
-        <input type="checkbox" id="terminos" name="terminos" required>
-        <label for="terminos">Aceptar términos y condiciones</label><br><br>
-
-        <div class="g-recaptcha" data-sitekey="6Lc0yMwnAAAAAOz7v5s4kuoxuyi_tN7a22zEosaQ" data-action="LOGIN"></div><br><br>
-
-        <div class="button-container">
-          <button type="submit" onclick="onClick(event)">Cancelar</button>
-          <button type="button" onclick="redirectToMain()">Confirmar</button>
+<h1></h1>
+  <header class="header">
+    <a href="/">
+        <div class="logo">
+           <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+              <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+            </svg>
         </div>
-      </form>
+    </a>
+    <div class="search-box">
+        <input type="text" placeholder="Buscar..." class="rounded-input">
+        <button class="search-button">Buscar</button>
     </div>
-  </div>
+    <div class="user-options">
+        <a href="/register">Registrar</a> / <a href="/login">Login</a>
+    </div>
+</header>
 
-  <script>
-    function onClick(e) {
-      e.preventDefault();
-      grecaptcha.enterprise.ready(async () => {
-        const token = await grecaptcha.enterprise.execute('6Lc0yMwnAAAAAOz7v5s4kuoxuyi_tN7a22zEosaQ', {action: 'LOGIN'});
-        window.location.href = '/home.html'; // Cambia '/home.html' por el link del home si es necesario
-      });
-    }
+<body>
+    <div class="form-container">
+        <div class="form-column left-column">
+            <form action="/registro" method="post">
+                <label for="nombre">Nombre y Apellido:</label>
+                <input type="text" id="nombre" name="nombre" required><br><br>
 
-    function redirectToMain() {
-      window.location.href = '/home.html'; // Cambia '/home.html' por el link del home si es necesario
-    }
-  </script>
+                <label for="correo">Correo Electrónico:</label>
+                <div style="display: flex; align-items: center;">
+                    <input type="email" id="correo" name="correo" required>
+                </div><br><br>
+
+                <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required><br><br>
+
+                <label for="codigoPostal">Código Postal:</label>
+                <input type="text" id="codigoPostal" name="codigoPostal" required><br><br>
+
+                <label for="numeroTelefono">Número de Teléfono:</label>
+                <div style="display: flex; align-items: center;">
+                    <input type="text" id="codigoArea" name="codigoArea" style="width: 80px;" placeholder="Área"
+                        required>
+                    <input type="text" id="numeroTelefono" name="numeroTelefono" style="margin-left: 10px;" required>
+                </div><br><br>
+
+                <label for="tipoDocumento">Tipo de Documento:</label>
+                <select id="tipoDocumento" name="tipoDocumento" required>
+                    <option value="dni" disabled selected>Seleccione un tipo de documento</option>
+                    <option value="dni">DNI</option>
+                    <option value="pasaporte">Pasaporte</option>
+                    <option value="carnet">Carnet de Identidad</option>
+                    <!-- Agrega más opciones si es necesario -->
+                </select><br><br>
+            </form>
+        </div>
+
+        <div class="form-column right-column">
+            <form action="/registro" method="post">
+                <label for="numeroDocumento">Número de Documento:</label>
+                <input type="text" id="numeroDocumento" name="numeroDocumento" required><br><br>
+
+                <label for="contrasena">Contraseña:</label>
+                <input type="password" id="contrasena" name="contrasena" required><br><br>
+
+                <label for="confirmarContrasena">Confirmar Contraseña:</label>
+                <input type="password" id="confirmarContrasena" name="confirmarContrasena" required><br><br>
+
+                <input type="checkbox" id="terminos" name="terminos" required>
+                <label for="terminos">Aceptar términos y condiciones</label><br><br>
+
+                <div class="g-recaptcha" data-sitekey="6Lc0yMwnAAAAAOz7v5s4kuoxuyi_tN7a22zEosaQ" data-action="LOGIN">
+                </div><br><br>
+
+                <div class="button-container">
+                    <button type="button" onclick="onClickCancelar()">Cancelar</button>
+                    <button type="button" onclick="onClickConfirmar()">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function onClickCancelar() {
+            // Agrega la dirección para cancelar
+            window.location.href = 'http://localhost:3001/'; // Cambia '/cancelar.html' por el link de cancelar si es necesario
+        }
+
+        function onClickConfirmar() {
+            // Agrega la dirección para confirmar
+            window.location.href = 'http://localhost:3001/'; // Cambia '/home.html' por el link del home si es necesario
+        }
+    </script>
+      <footer class="footer">
+   
+        <h1></h1>
+        <div class="footer-content">
+          
+            <h3>Lib-Fake</h3>
+            <div class="contact-info">
+                <p>Número de contacto: +0800-ufk-mom</p>
+                <p>Correo: cojeviejas@libfake.com</p>
+                <p>Sucursal: hasta tu casa bebe, toc toc</p>
+            </div>
+        </div>
+    
 </body>
+
 </html>
