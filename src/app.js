@@ -10,6 +10,7 @@ app.listen(PORT, () => {
 console.log(`Se prendió en el puerto ${PORT}`);
 });
  //especificar la ruta("/"raiz), mediante el metodo get, recibe dos parametros (ruta o url y callback)
+ 
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "views/home.html")); // enviar una archivo al navegador, ruta absoluta con ubicacion del archivo
   });
