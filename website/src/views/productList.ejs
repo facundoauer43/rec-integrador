@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('partials/head') %>
+    <!-- css mio -->
+    <link rel="stylesheet" href="/css/productListStyles.css">
+    <title>Galeria Productos</title>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <div class="mt-20">
+        <h1>Todos los Productos!</h1>
+    <div class="filtros">
+        <h2>Filtrá tus productos</h2>
+        <i class="fa-solid fa-bars menuHamburguesa"></i>
+        <div class="filterContainer">
+            <ul class="filterList">
+                <li>Precio Ascendente <i class="fa-solid fa-arrow-up-short-wide"></i></li>
+                <li>Precio Descendente <i class="fa-solid fa-arrow-down-wide-short"></i></li>
+                <li>Autor <i class="fa-solid fa-palette"></i></li>
+                <li>Técnica <i class="fa-solid fa-paintbrush"></i></li>
+            </ul>
+        </div>
+    </div>
+    <main class="caja">
+        <% for( let i = 0; i < products.length; i++ ) { %>
+            <div class="cardProducto">
+                <img src="<%= products[i].img %>" alt="">
+                <div class="cardProductoText">
+                    <p><%= products[i].title %></p>
+                    <p class="cardProductoPrice">$ <%= products[i].price %></p>
+                    <a class="button" href="/productdetail/<%= products[i].id %>">Ver Detalle</a>
+                </div>
+            </div>
+        <% } %>
+    </main>
+    </div>
+    <%- include('partials/footer') %>
+</body>
+</html>
