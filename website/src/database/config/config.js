@@ -4,7 +4,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": process.env.PASSWORD || null,
-    "database": "mercadoarte",
+    "database": "libfake",
     "host": "localhost",
     "dialect": "mysql",
     "port": 3306
